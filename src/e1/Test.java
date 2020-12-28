@@ -77,7 +77,6 @@ public class Test {
 		cc.bookRoom(MONDAY, VELA, 10, 6, "OOP");
 		
 		Set<Pair<Integer,String>> set = cc.dayRoomSlots(MONDAY, VELA);
-		System.out.println(set);
 		assertEquals(set.size(),6);
 		assertTrue(set.contains(new Pair<>(10,"OOP")));
 		assertTrue(set.contains(new Pair<>(11,"OOP")));
