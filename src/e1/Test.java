@@ -77,6 +77,24 @@ public class Test {
         assertTrue(set.contains(new Pair<>(16, "OOP")));
     }
 
+<<<<<<< HEAD
+=======
+	@org.junit.Test
+	public void optionalTestJumpBooking() {
+		// una prenotazione di 6 ore a cavallo del pranzo
+		CoursesCalendar cc = new CoursesCalendarImpl();
+		cc.bookRoom(MONDAY, VELA, 10, 6, "OOP");
+		
+		Set<Pair<Integer,String>> set = cc.dayRoomSlots(MONDAY, VELA);
+		assertEquals(set.size(),6);
+		assertTrue(set.contains(new Pair<>(10,"OOP")));
+		assertTrue(set.contains(new Pair<>(11,"OOP")));
+		assertTrue(set.contains(new Pair<>(12,"OOP")));
+		assertTrue(set.contains(new Pair<>(14,"OOP")));
+		assertTrue(set.contains(new Pair<>(15,"OOP")));
+		assertTrue(set.contains(new Pair<>(16,"OOP")));
+	}
+>>>>>>> b7fadcab31450bb1884fb74820d206112253dc66
 
     @org.junit.Test
     public void testConflictingBooking() {
